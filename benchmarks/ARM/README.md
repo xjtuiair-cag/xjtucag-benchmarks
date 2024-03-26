@@ -44,7 +44,7 @@ $ bfs.elf 1 矩阵路径/名称
 1/0 表示是否需要会进行多次迭代，迭代次数为 kernel_iter_times
 
  Example : ./bfs.elf 1 matrices/simple_test_csr.mtx
-```
+```矩阵下载：http://suitesparse.com
 
  Single-Source Shortest Paths (SSSP) - delta stepping
 
