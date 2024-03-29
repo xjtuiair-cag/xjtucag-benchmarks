@@ -21,13 +21,15 @@ Make sure you have the GCC compiler and its associated toolchain installed
 ### Note
 
 - Make sure to review and adjust the compiler and linker flags based on your project specifications.
+- Download  martrix from[SuiteSparse Matrix Collection (tamu.edu)](https://sparse.tamu.edu/)（general format
+- If some matrices are in pattern format without values, use the mtx.csr.py script to convert them.
 
-For any further assistance or inquiries, feel free to reach out.
+
 
  Breadth-First Search (BFS) - direction optimizing
 
 ```
-$ bfs.elf 1 矩阵路径/名称
+$ bfs_csr.elf 1 矩阵路径/名称
 
 1/0 表示是否需要会进行多次迭代，迭代次数为 kernel_iter_times
 
@@ -35,13 +37,39 @@ $ bfs.elf 1 矩阵路径/名称
  
 ```
 
- Single-Source Shortest Paths (SSSP) - delta stepping
+ 
+
+Single-Source Shortest Paths (SSSP) - delta stepping
+
+```
+$ ./sssp_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
 
 PageRank (PR) - iterative method in pull direction
 
+```
+$ ./pr_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
 Connected Components (CC) - Afforest & Shiloach-Vishkin
 
+```
+$ ./cc_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
 Betweenness Centrality (BC) - Brandes
+
+```
+$ ./bc_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
 
 Triangle Counting (TC) - Order invariant with possible relabelling
 
@@ -52,8 +80,21 @@ Triangle Counting (TC) - Order invariant with possible relabelling
 （选择一个矩阵文件）
 ```
 
+
+
 Sparse Matrix-Dense Vector Multiplication（SPMV）-
 
-Sparse Matrix-Matrix Multiplicatio（SPMM）- 
+```
+$ ./spmv_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+
 
 Symmetric Gauss-Seidel（SYMGS）-
+
+```
+$ ./symgs_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
