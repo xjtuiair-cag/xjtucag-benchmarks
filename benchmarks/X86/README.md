@@ -55,7 +55,7 @@ $ ./pr_scr.elf 1 matrices/simple_test_csr.mtx
 
 
 
-Connected Components (CC) - Afforest & Shiloach-Vishkin
+Connected Components (CC) - 
 
 ```
 $ ./cc_scr.elf 1 matrices/simple_test_csr.mtx
@@ -71,6 +71,26 @@ $ ./bc_scr.elf 1 matrices/simple_test_csr.mtx
 
 
 
+parse Matrix-Dense Vector Multiplication（SPMV）-
+
+```
+$ ./spmv_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+Symmetric Gauss-Seidel（SYMGS）-
+
+```
+$ ./symgs_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+待更新：
+
+Sparse Matrix-Matrix Multiplicatio（SPMM）- 
+
+
+
 Triangle Counting (TC) - Order invariant with possible relabelling
 
 ```
@@ -80,21 +100,9 @@ Triangle Counting (TC) - Order invariant with possible relabelling
 （选择一个矩阵文件）
 ```
 
-
-
-Sparse Matrix-Dense Vector Multiplication（SPMV）-
-
-```
-$ ./spmv_scr.elf 1 matrices/simple_test_csr.mtx
-```
+Integer Sort（IS） -  random memory access
 
 
 
-
-
-Symmetric Gauss-Seidel（SYMGS）-
-
-```
-$ ./symgs_scr.elf 1 matrices/simple_test_csr.mtx
-```
+Conjugate Gradient（CG）-  irregular memory access and communication
 
