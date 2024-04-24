@@ -34,25 +34,75 @@ HMS: `home-make-serial` serial implements for some kernels
 - This Makefile is tailored for cross-compiling C code for ARM architecture using the `aarch64-linux-gnu-` toolchain.
 - Make sure to review and adjust the compiler and linker flags based on your project specifications.
 
-For any further assistance or inquiries, feel free to reach out.
+- Download  martrix from [SuiteSparse Matrix Collection (tamu.edu)](https://sparse.tamu.edu/)（general format）
+- If some matrices are in pattern format without values, use the mtx.csr.py script to convert them.
+
+
 
  Breadth-First Search (BFS) - direction optimizing
 
 ```
-$ bfs.elf 1 矩阵路径/名称
+$ bfs_csr.elf 1 矩阵路径/名称
 
 1/0 表示是否需要会进行多次迭代，迭代次数为 kernel_iter_times
 
- Example : ./bfs.elf 1 matrices/simple_test_csr.mtx
-```矩阵下载：http://suitesparse.com
+ Example : ./bfs_scr.elf 1 matrices/simple_test_csr.mtx
+ 
+```
 
- Single-Source Shortest Paths (SSSP) - delta stepping
+ 
+
+Single-Source Shortest Paths (SSSP) - delta stepping
+
+```
+$ ./sssp_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
 
 PageRank (PR) - iterative method in pull direction
 
-Connected Components (CC) - Afforest & Shiloach-Vishkin
+```
+$ ./pr_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+Connected Components (CC) - 
+
+```
+$ ./cc_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
 
 Betweenness Centrality (BC) - Brandes
+
+```
+$ ./bc_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+parse Matrix-Dense Vector Multiplication（SPMV）-
+
+```
+$ ./spmv_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+Symmetric Gauss-Seidel（SYMGS）-
+
+```
+$ ./symgs_scr.elf 1 matrices/simple_test_csr.mtx
+```
+
+
+
+Sparse Matrix-Matrix Multiplicatio（SPMM）- 
+
+
 
 Triangle Counting (TC) - Order invariant with possible relabelling
 
@@ -63,8 +113,9 @@ Triangle Counting (TC) - Order invariant with possible relabelling
 （选择一个矩阵文件）
 ```
 
-Sparse Matrix-Dense Vector Multiplication（SPMV）-
+Integer Sort（IS） -  random memory access
 
-Sparse Matrix-Matrix Multiplicatio（SPMM）- 
 
-Symmetric Gauss-Seidel（SYMGS）-
+
+Conjugate Gradient（CG）-  irregular memory access and communication
+
